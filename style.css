@@ -1,0 +1,27 @@
+
+:root {
+    --fundo-escuro: #121212;
+    --texto-pricipal: #E0E0E0;
+    --destaque-coral: #FF6B6B;
+    --status-teal: #4ECDC4;
+    --alerta-amarelo: #F7B733;
+    --sucesso-verde: #2ECC71;
+    --fundo-card: #1E1E1E;
+    --fundo-hover: #2A2A2A;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
