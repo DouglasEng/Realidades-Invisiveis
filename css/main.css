@@ -7,7 +7,10 @@
     --sucesso-verde: #2ECC71;
     --fundo-card: #1E1E1E;
     --fundo-hover: #2A2A2A;
-
+    --vermelho-sangue: #8B0000;
+    --vermelho-flash: #240707;
+    --preto-absoluto: #000000;
+    --cinza-sombrio: #1a1a1a;
 }
 
 
@@ -89,28 +92,6 @@ body {
 .animar-frase-2 {
     animation: entrarZoom 2s ease-out forwards 5.4s,
                 sairZoom 1.6s ease-in forwards 8.8s;
-}
-
-@keyframes entrarZoom {
-    0% {
-    opacity: 0;
-    transform: translate(-50%, 60px) scale(0.4);
-    }
-    100% {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-    }
-}
-
-@keyframes sairZoom {
-    0% {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-    }
-    100% {
-    opacity: 0;
-    transform: translate(-50%, -100px) scale(4);
-    }
 }
 
 .final {
