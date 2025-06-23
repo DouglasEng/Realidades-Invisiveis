@@ -11,17 +11,115 @@
 
 }
 
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background-color: var(--bg-dark);
-    color: var(--text-primary);
-    line-height: 1.6;
-    overflow-x: hidden;
+html, body {
+    width: 100%;
+    height: 100%;
 }
 
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--fundo-escuro);
+    color: var(--texto-principal);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#jogo-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.frase-dramatica {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--destaque-coral);
+    opacity: 0;
+    transform: translateY(60px) scale(0.4);
+    animation-fill-mode: forwards;
+    display: inline-block;
+    line-height: 1.4;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 40px) scale(0.4);
+}
+
+.animar-frase-1 {
+    animation: entrarZoom 2s ease-out forwards,
+                sairZoom 1.6s ease-in forwards 3.4s;
+}
+
+.animar-frase-2 {
+    animation: entrarZoom 2s ease-out forwards 5.4s,
+                sairZoom 1.6s ease-in forwards 8.8s;
+}
+
+@keyframes entrarZoom {
+    0% {
+    opacity: 0;
+    transform: translate(-50%, 60px) scale(0.4);
+    }
+    100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@keyframes sairZoom {
+    0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+    opacity: 0;
+    transform: translate(-50%, -100px) scale(4);
+    }
+}
+
+.final {
+    opacity: 0;
+    transform: scale(0.85);
+    transition: all 1.5s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.85);
+    text-align: center;
+}
+
+.final.aparecer {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+#botao-start {
+    margin-top: 2rem;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    background-color: var(--destaque-coral);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1.2s ease;
+}
+
+#botao-start.entrar {
+    opacity: 1;
+    transform: translateY(1);
+}
