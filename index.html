@@ -10,17 +10,34 @@
 <body>
 
   <section id="jogo-container">
-    <h1 id="frase1" class="frase-dramatica">Realidades Invisíveis</h1>
-    <p id="frase2" class="frase-dramatica">Um simulador narrativo sobre a vida de pessoas em situação de vulnerabilidade social no Brasil</p>
+    <div id="tela-introdutoria" class="tela ativa">
+      <div class="conteudo">
 
-    <div id="final-intro" class="final">
-      <h1 class="frase-dramatica" style="transform:  scale(1); opacity: 1; position: static; ">Realidades Invisíveis</h1>
-      <p class="frase-dramatica" style="transform:  scale(1); opacity: 1; position: static; color: var(--texto-pricipal); font-weight: 300;">Um simulador narrativo sobre a vida de pessoas em situação de vulnerabilidade social no Brasil</p>
-      <button id="botao-start">Começar</button>
+        <h1 id="frase1" class="frase-dramatica">Realidades Invisíveis</h1>
+        <p id="frase2" class="frase-dramatica">Um simulador narrativo sobre a vida de pessoas em situação de vulnerabilidade social no Brasil</p>
+        <div id="final-intro" class="final">
+          <h1 class="frase-dramatica" style="transform:  scale(1); opacity: 1; position: static; ">Realidades Invisíveis</h1>
+          <p class="frase-dramatica"style="transform:  scale(1); opacity: 1; position: static; color: var(--texto-pricipal); font-weight: 300;">
+                  Um simulador narrativo sobre a vida de pessoas em situação de vulnerabilidade social no Brasil</p>
+          <button id="botao-start" class="botao-primario">Começar</button>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="tela-personagem" class="tela">
+      <div class="conteudo">
+        <h2 class="titulo-seção">Escolha sua realidade</h2>
+        <div id="personagens-opcoes" class="grid-personagem">
+          
+        </div>
+      </div>
     </div>
 
   </section>
 
   <script src="js/game-animations.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/game-data.js"></script>
 </body>
 </html>
