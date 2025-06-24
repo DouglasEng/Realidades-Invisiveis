@@ -198,3 +198,102 @@ body {
     font-style: italic;
     line-height: 1.4;
 }
+
+/* tela do jogo */
+.conteudo-jogo {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 2rem;
+}
+
+#narrativa-container {
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+    position: relative;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.frase-narrativa {
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: var(--texto-pricipal);
+    line-height: 1.6;
+    opacity: 0;
+    transform: translateY(60px) scale(0.4);
+    transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: absolute;
+    width: 100%;
+    cursor: pointer;
+    user-select: none;
+}
+
+.frase-narrativa.aparecer {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.frase-narrativa.sair {
+    opacity: 0;
+    transform: translateY(-100px) scale(1.8);
+    transition: all 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+
+.frase-narrativa.destaque {
+    color: var(--destaque-coral);
+    font-weight: 600;
+}
+
+.frase-narrativa.pensamento {
+    color: var(--status-teal);
+    font-style: italic;
+    font-size: 1.8rem;
+}
+
+.frase-narrativa.impacto {
+    color: var(--alerta-amarelo);
+    font-weight: 700;
+    text-shadow: 0 0 20px rgba(247, 183, 51, 0.3);
+}
+
+/* overlay de transição */
+.overlay-transicao {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--fundo-escuro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+}
+
+.overlay-transicao.ativo {
+    opacity: 1;
+    visibility: visible;
+}
+
+.loading-text {
+    font-size: 1.5rem;
+    color: var(--destaque-coral);
+    font-weight: 500;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
