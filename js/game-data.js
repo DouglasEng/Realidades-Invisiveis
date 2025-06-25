@@ -575,3 +575,76 @@ const eventosNarrativos = {
         ]
     }
 };
+
+// finais da simulação
+
+const finaisPossiveis = {
+    'mae-solo': {
+        positivo: {
+            titulo: "Força que Transforma",
+            narrativa: "Apesar de todas as dificuldades, você conseguiu manter sua família unida. Suas escolhas, mesmo as mais difíceis, foram feitas com amor. João e Ana cresceram vendo sua força e determinação. Eles sabem que, não importa o que aconteça, sempre terão você.",
+            condicoes: { esperanca: 40, saude: 30 }
+        },
+        neutro: {
+            titulo: "Resistência Diária",
+            narrativa: "Cada dia é uma batalha, mas você continua lutando. Há momentos de desespero, mas também pequenas vitórias. Você aprendeu que sobreviver já é uma forma de resistência. Suas crianças podem não ter tudo, mas têm o mais importante: uma mãe que nunca desiste.",
+            condicoes: { esperanca: 20, saude: 15 }
+        },
+        negativo: {
+            titulo: "O Peso da Sobrevivência",
+            narrativa: "O cansaço tomou conta. Você deu tudo de si, mas às vezes não foi suficiente. As crianças sentem sua exaustão, e isso dói mais que a própria fome. Você precisa de ajuda, mas não sabe onde encontrar. Mesmo assim, amanhã você vai levantar de novo.",
+            condicoes: { esperanca: 0, saude: 0 }
+        }
+    },
+    'jovem-desempregado': {
+        positivo: {
+            titulo: "O Primeiro Passo",
+            narrativa: "Você descobriu que o primeiro emprego não é só sobre dinheiro - é sobre dignidade. Cada 'não' que recebeu te fortaleceu para o 'sim' que mudou tudo. Agora você tem perspectiva, tem futuro. Sua mãe sorri quando te vê de uniforme.",
+            condicoes: { esperanca: 50, dinheiro: 400 }
+        },
+        neutro: {
+            titulo: "Entre a Esperança e o Desespero",
+            narrativa: "Alguns dias você acredita que vai conseguir, outros quer desistir de tudo. A pressão da família pesa, mas você entende que eles também estão sofrendo. Você ainda procura seu lugar no mundo, e isso não é fácil aos 19 anos.",
+            condicoes: { esperanca: 25 }
+        },
+        negativo: {
+            titulo: "Perdido na Própria Vida",
+            narrativa: "A sensação de inutilidade tomou conta. Você se sente um peso para todos ao redor. A depressão bate na porta todos os dias, e você não sabe como pedir ajuda. Sua juventude está sendo consumida pela desesperança.",
+            condicoes: { esperanca: 10, estresse: 80 }
+        }
+    },
+    'trabalhador-informal': {
+        positivo: {
+            titulo: "Sobrevivência Amarga",
+            narrativa: "Você ainda está vivo, e isso já é uma vitória amarga. Conseguiu um cantinho para dormir e come uma vez por dia. Seus filhos não sabem onde você está, e talvez seja melhor assim. Você aprendeu que às vezes sobreviver é tudo que se pode fazer. A dignidade é um luxo que você não pode mais pagar.",
+            condicoes: { dinheiro: 100, esperanca: 15 }
+        },
+        neutro: {
+            titulo: "Fantasma de Si Mesmo",
+            narrativa: "Você se tornou invisível para o mundo. Caminha pelas ruas como um fantasma, vendendo o que pode, dormindo onde consegue. Sua família te esqueceu, a sociedade te descartou. Você existe, mas não vive. Cada dia é uma luta para não desaparecer completamente.",
+            condicoes: { dinheiro: 50, esperanca: 5 }
+        },
+        negativo: {
+            titulo: "O Fim da Linha",
+            narrativa: "Você perdeu tudo: família, dignidade, esperança, saúde. Vive nas ruas, dependendo da caridade alheia. Seus filhos crescerão sem saber que tiveram um pai que um dia sonhou em ser alguém. Você se tornou estatística, mais um número na multidão de esquecidos. A vida te venceu completamente.",
+            condicoes: { saude: 5, estresse: 100, esperanca: 0 }
+        }
+    },
+    'idoso-aposentado': {
+        positivo: {
+            titulo: "O Legado de uma Vida",
+            narrativa: "Você conseguiu dar aos seus netos o que não pôde dar à sua filha: esperança. Mesmo com pouco dinheiro, você investiu no futuro deles. Ver seu neto na universidade vale todos os sacrifícios. Você sabe que sua missão está sendo cumprida.",
+            condicoes: { esperanca: 70, dinheiro: 200 }
+        },
+        neutro: {
+            titulo: "Guardiã de Sonhos",
+            narrativa: "Você faz o que pode com o que tem. Nem sempre é suficiente, mas seus netos sabem que são amados. Você ensina pelo exemplo que a vida é difícil, mas vale a pena ser vivida. Cada dia é uma pequena vitória.",
+            condicoes: { esperanca: 40 }
+        },
+        negativo: {
+            titulo: "O Peso dos Anos",
+            narrativa: "Sua saúde está frágil, mas você não pode parar. Os netos dependem de você, e isso é ao mesmo tempo sua força e seu fardo. Você tem medo do que vai acontecer com eles quando você não estiver mais aqui. A preocupação consome suas noites.",
+            condicoes: { saude: 15, estresse: 80 }
+        }
+    }
+};
