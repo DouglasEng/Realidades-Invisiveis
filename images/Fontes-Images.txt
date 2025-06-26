@@ -1,0 +1,43 @@
+Mães solos:
+	imagem1: https://www.brasildefato.com.br/2023/05/14/datafolha-metade-das-maes-brasileiras-sao-solo-e-69-das-mulheres-no-pais-tem-ao-menos-1-filho/
+	imagem2: https://g1.globo.com/bom-dia-brasil/noticia/2023/05/12/brasil-tem-mais-de-11-milhoes-de-maes-que-criam-os-filhos-sozinhas.ghtml
+	argumento1: https://www.terra.com.br/nos/chefe-de-familia-e-salarios-mais-baixos-quem-sao-as-maes-do-brasil-hoje%2Cadb0cd94552c997bd760c2aa4819a61e0l33gw7p.html
+	argumento2: https://g1.globo.com/bom-dia-brasil/noticia/2023/05/12/brasil-tem-mais-de-11-milhoes-de-maes-que-criam-os-filhos-sozinhas.ghtml
+	estatistica1: https://blogdoibre.fgv.br/posts/maes-solo-no-mercado-de-trabalho
+	jornal1: https://www.jusbrasil.com.br/artigos/11-milhoes-de-maes-solo-no-brasil/2332232268
+	jornal2: https://revistacrescer.globo.com/maes-e-pais/noticia/2024/10/censo-do-ibge-numero-de-maes-solo-e-6-vezes-maior-do-que-o-de-pais-solo-no-brasil.ghtml
+	desenho: https://kikacastro.com.br/2021/12/01/carta-ao-meu-filho-luiz-6-anos/
+	frase1: https://g1.globo.com/df/distrito-federal/noticia/2023/05/14/maes-solo-conheca-o-dilema-das-mulheres-que-sao-mae-e-pai.ghtml
+
+Jovem desempregado:
+	imagem1: https://www1.diariodeaparecida.com.br/2025/04/30/desemprego-entre-jovens-brasileiros-e-mais-que-o-dobro-da-taxa-entre-adultos-revela-ibge
+	frase1: https://www1.diariodeaparecida.com.br/2025/04/30/desemprego-entre-jovens-brasileiros-e-mais-que-o-dobro-da-taxa-entre-adultos-revela-ibge
+	argumento1: https://istoedinheiro.com.br/desemprego-entre-jovens-dobro-media-1tri-2025
+	argumento2: https://g1.globo.com/profissao-reporter/noticia/2024/03/06/falta-de-experiencia-pouco-estudo-e-qualificacao-profissao-reporter-mostra-as-dificuldades-dos-jovens-em-busca-do-primeiro-emprego.ghtml
+	argumento3: https://www.cnnbrasil.com.br/economia/macroeconomia/numero-de-jovens-desempregados-cai-pela-metade-em-4-anos-mostra-ministerio/
+	estatistica1: https://oglobo.globo.com/economia/noticia/2023/11/22/desemprego-entre-jovens-de-18-a-24-anos-e-mais-de-duas-vezes-superior-a-media-nacional.ghtml
+	jornal2: https://cps.fgv.br/midias/xc079-jovens-sao-os-mais-afetados-no-mercado-de-trabalho
+	jornal1: https://outraspalavras.net/trabalhoeprecariado/a-encruzilhada-do-desemprego-juvenil/
+	manifestação: Mídia Ninja
+Trabalhador informal:
+	estatistica1: https://www.ipea.gov.br/portal/retrato/indicadores/mercado-de-trabalho/desemprego-informalidade-subutilizacao-e-inatividade/apresentação
+	imagem1: https://agenciabrasil.ebc.com.br/economia/noticia/2025-04/mais-de-32-milhoes-sao-autonomos-informais-ou-trabalham-sem-carteira
+	imagem2: https://www.cnnbrasil.com.br/economia/macroeconomia/68-dos-trabalhadores-autonomos-no-brasil-gostariam-de-ter-carteira-assinada-diz-fgv/
+	imagem3: https://agenciabrasil.ebc.com.br/economia/noticia/2020-11/ibge-informalidade-atinge-416-dos-trabalhadores-no-pais-em-2019
+	imagem4: https://diariogaucho.clicrbs.com.br/dia-a-dia/noticia/2023/08/operacao-apreende-alimentos-e-materiais-eletronicos-vendidos-por-ambulantes-no-centro-de-porto-alegre-31318906.html
+	jornal1: https://www.brasildefato.com.br/2023/12/06/pessoas-negras-sao-maioria-em-postos-de-trabalho-informais-e-ganham-61-menos-que-pessoas-brancas-aponta-ibge/
+	argumento1: https://www.ipea.gov.br/portal/categorias/268-retratos-indicadores/retratos-indicadores-mercado-de-trabalho
+	argumento2: https://fiocruz.br/noticia/2020/10/pesquisa-analisa-o-impacto-da-pandemia-na-saude-mental-de-trabalhadores-essenciais
+	foto: https://npexpresso.com.br/geral/a-historia-inspiradora-de-lucas-garcia-o-vendedor-ambulante-que-sonha-em-se-tornar-empresario
+
+Deficiencia:
+	imagem1: https://www1.folha.uol.com.br/mercado/2023/07/mais-da-metade-dos-trabalhadores-com-deficiencia-sao-informais-no-brasil.shtml
+	imagem2: https://www.estadao.com.br/brasil/vencer-limites/ibge-confirma-o-que-enfrentamos-todo-dia-a-desigualdade-afeta-mais-as-pessoas-com-deficiencia
+	imagem3: https://jornal.usp.br/diversidade/invisibilidade-marca-as-vidas-de-mulheres-com-deficiencia-em-situacao-de-violencia-domestica-e-familiar/
+	argumento1: https://www1.folha.uol.com.br/cotidiano/2025/05/censo-revela-exclusoes-cruzadas-e-marginalizacao-da-pessoa-com-deficiencia-no-brasil.shtml
+	jornal1: https://www1.folha.uol.com.br/cotidiano/2023/07/quase-20-das-pessoas-com-deficiencia-sao-analfabetas-no-brasil.shtml
+	frase1: https://conexao.ufrj.br/2020/09/conhecer-aquilo-que-nao-e-espelho/
+	estatistica1: https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/43463-censo-2022-brasil-tem-14-4-milhoes-de-pessoas-com-deficiencia
+	estatistica2: https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/37317-pessoas-com-deficiencia-tem-menor-acesso-a-educacao-ao-trabalho-e-a-renda
+	foto1: https://ge.globo.com/paralimpiadas/noticia/2024/09/03/gabrielzinho-vibra-com-sucesso-e-faz-planos-para-depois-de-paris-aproveitar-tudo-curtir-essa-fama.ghtml
+	
