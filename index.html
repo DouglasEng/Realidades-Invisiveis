@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/efects.css">
+  <link rel="stylesheet" href="css/final-sequence.css">
 </head>
 
 <body>
@@ -68,6 +69,42 @@
       </div>
     </div>
 
+    <div id="tela-final" class="tela">
+      <div id="final-verdadeiro" class="oculto">
+        <div class="final-background-effect"></div>
+        <div class="final-content">
+          <h2 id="titulo-final" class="titulo-fixo"></h2>
+          <div id="narrativa-container" class="narrativa-container">
+            <p id="frase-final" class="frase-narrativa"></p>
+          </div>
+        </div>
+      </div>
+
+      <div id="final-dramatico-container" class="final-dramatico-container">
+        <div id="efeito-dramatico" class="efeito-dramatico">
+          <div class="flash-overlay"></div>
+          <div class="tremor-texto">
+            <span class="texto-tremendo">FINAL</span>
+          </div>
+          <div class="sombras-finais">
+            <div class="sombra-final sombra-1"></div>
+            <div class="sombra-final sombra-2"></div>
+            <div class="sombra-final sombra-3"></div>
+          </div>
+        </div>
+
+        <div id="desfecho-narrativo" class="desfecho-narrativo oculto">
+          <div id="frase-desfecho" class="frase-desfecho"></div>
+        </div>
+
+        <div id="imagens-container" class="imagens-container oculto">
+          <div id="imagem-central" class="imagem-central"></div>
+          <div id="colagem-imagens" class="colagem-imagens"></div>
+          <div id="imagem-final-central" class="imagem-final-central"></div>
+        </div>
+      </div>
+    </div>
+
   </section>
 
   <div id="overlay-loading" class="overlay-transicao">
@@ -78,6 +115,7 @@
   <script src="js/game-animations.js"></script>
   <script src="js/main.js"></script>
   <script src="js/game-data.js"></script>
+  <script src="js/final-sequence.js"></script>
 </body>
 
 </html>

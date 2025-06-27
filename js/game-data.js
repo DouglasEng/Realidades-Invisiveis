@@ -578,7 +578,7 @@ const eventosNarrativos = {
 
 // finais da simulação
 
-const finaisPossiveis = {
+window.finaisPossiveis = {
     'mae-solo': {
         positivo: {
             titulo: "Força que Transforma",

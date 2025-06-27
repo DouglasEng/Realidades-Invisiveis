@@ -262,7 +262,7 @@ class RealidadesInvisiveis {
         this.estadoAtual.eventoAtual = 0;
 
         if (this.estadoAtual.semanaAtual > 4) {
-            // continuação para finalização
+            this.finalizarJogo();
             return;
         }
 
@@ -273,6 +273,16 @@ class RealidadesInvisiveis {
         ], () => {
             this.iniciarSemana();
         });
+    }
+
+    finalizarJogo() {
+        this.estadoAtual.jogoFinalizado = true;  
+        this.elementos.telaJogo.classList.remove('ativa');     
+        if (window.SequenciaFinal) {
+            SequenciaFinal.iniciar(this.estadoAtual.personagem);
+        } else {
+            console.error('SequenciaFinal não encontrada');
+        }
     }
 
     mostrarLoading(texto = "Carregando...") {
@@ -300,5 +310,5 @@ class RealidadesInvisiveis {
 
 // inicializa o jogo
 document.addEventListener('DOMContentLoaded', () => {
-    new RealidadesInvisiveis();
+    window.jogo = new RealidadesInvisiveis();
 });
