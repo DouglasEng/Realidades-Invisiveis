@@ -328,12 +328,13 @@ class SequenciaFinal {
             if (imagemAtual >= imagens.length) {
                 this.timeouts.push(setTimeout(() => {
                     this.mostrarImagemFinalCentral();
-                }, 1000));
+                }, 2000));
                 return;
             }
 
             this.adicionarImagemColagem(imagens[imagemAtual], imagemAtual);
             imagemAtual++;
+            this.elementos.fraseDesfecho.textContent = '';
 
             let proximaVelocidade = imagemAtual >= 4 ? 200 : velocidadeBase - (imagemAtual * 300);
             proximaVelocidade = Math.max(proximaVelocidade, 200);
@@ -377,47 +378,194 @@ class SequenciaFinal {
         this.elementos.imagemFinalCentral.style.transform = 'translate(-50%, -50%) scale(1)';
 
         this.timeouts.push(setTimeout(() => {
-            this.iniciarTransicaoReflexao();
+            this.iniciarDesaparecimentoImagens();
         }, 4000));
     }
+    iniciarDesaparecimentoImagens() {
 
-    resetarElementos() {
-        this.elementos.efeitoDramatico.classList.remove('ativo');
-        this.elementos.efeitoDramatico.style.display = 'none';
-        
-        this.elementos.desfechoNarrativo.classList.add('oculto');
-        this.elementos.desfechoNarrativo.classList.remove('mostrar');
-        this.elementos.fraseDesfecho.textContent = '';
-        
-        this.elementos.imagensContainer.classList.add('oculto');
-        this.elementos.imagensContainer.classList.remove('mostrar');
-        this.elementos.imagensContainer.style.opacity = '1';
-        this.elementos.imagensContainer.style.transition = '';
-        
-        this.elementos.imagemCentral.innerHTML = '';
-        this.elementos.imagemCentral.style.opacity = '0';
-        this.elementos.colagemImagens.innerHTML = '';
-        this.elementos.imagemFinalCentral.innerHTML = '';
+        this.elementos.imagemFinalCentral.style.transition = 'opacity 2s ease-out, transform 2s ease-out';
         this.elementos.imagemFinalCentral.style.opacity = '0';
+        this.elementos.imagemFinalCentral.style.transform = 'translate(-50%, -50%) scale(0.8)';
         
-        if (this.elementos.finalVerdadeiro) {
-            this.elementos.finalVerdadeiro.classList.remove('mostrar', 'oculto');
-            this.elementos.finalVerdadeiro.style.opacity = '';
-            this.elementos.finalVerdadeiro.style.display = '';
-        }
-        
-        if (this.elementos.fraseAtual) {
-            this.elementos.fraseAtual.textContent = '';
-            this.elementos.fraseAtual.classList.remove('mostrar', 'sair');
-        }
-        
-        if (this.elementos.finalContent) {
-            this.elementos.finalContent.classList.remove('sair-final');
-        }
-        
-        this.frasesNarrativa = [];
-        this.fraseAtualIndex = 0;
+        const imagensColagem = this.elementos.colagemImagens.querySelectorAll('.imagem-colagem');
+        imagensColagem.forEach((imagem, index) => {
+            setTimeout(() => {
+                imagem.style.transition = 'opacity 1.5s ease-out, transform 1.5s ease-out';
+                imagem.style.opacity = '0';
+                imagem.style.transform = 'scale(0.5) rotate(var(--rotacao))';
+            }, index * 200);
+        });
+        this.timeouts.push(setTimeout(() => {
+            this.iniciarEfeitoFinalizacao();
+        }, 5000));
     }
+
+    iniciarEfeitoFinalizacao() {
+
+        this.elementos.imagensContainer.style.opacity = '0';
+        this.elementos.imagensContainer.style.transition = 'opacity 1s ease-out';
+        
+        const efeitoContainer = document.createElement('div');
+        efeitoContainer.id = 'container-final'; 
+        efeitoContainer.className = 'container-final';
+        
+        efeitoContainer.innerHTML = `
+        <div class="terror-container">
+            <div id="flash-overlay" class="flash-overlay"></div>
+            <div id="glitch-text" class="glitch-text">
+            <span class="glitch-layer" data-text="REALIDADES">REALIDADES</span>
+            <span class="glitch-layer" data-text="INVISÍVEIS">INVISÍVEIS</span>
+            </div>
+            <div id="sombras" class="sombras">
+            <div class="sombra sombra-1"></div>
+            <div class="sombra sombra-2"></div>
+            <div class="sombra sombra-3"></div>
+            </div>
+
+        </div>
+        </div>
+        `;
+        
+        this.elementos.telaFinal.appendChild(efeitoContainer);
+        
+        setTimeout(() => {
+            efeitoContainer.classList.add('ativo');
+        }, 100);
+        
+        this.timeouts.push(setTimeout(() => {
+            this.iniciarFrasesfinalizacao();
+        }, 3000));
+    }
+
+    iniciarFrasesfinalizacao() {
+        const frases = [
+            "Essas histórias não são ficção.",
+            "São pedaços do Brasil real.",
+            "Você pode fechar esse jogo, mas eles continuam lutando lá fora.",
+            "A mudança começa com empatia e ação."
+        ];
+
+        const frasesContainer = document.createElement('div');
+        frasesContainer.id = 'frases-finalizacao-container';
+        frasesContainer.className = 'frases-finalizacao-container';
+        
+        this.elementos.telaFinal.appendChild(frasesContainer);
+        
+        frases.forEach((texto, index) => {
+            const fraseElement = document.createElement('div');
+            fraseElement.className = 'linha-terror'
+            fraseElement.textContent = texto;
+            frasesContainer.appendChild(fraseElement);
+            
+            this.timeouts.push(setTimeout(() => {
+                fraseElement.classList.add('aparecer');
+            }, index * 2500));
+        });
+        
+        this.timeouts.push(setTimeout(() => {
+            this.mostrarBotoesFinais();
+        }, frases.length * 2500 ));
+    }
+
+    mostrarBotoesFinais() {
+        const botoesContainer = document.createElement('div');
+        botoesContainer.id = 'botoes-finais-container';
+        botoesContainer.className = 'botoes-finais-container';
+        
+        botoesContainer.innerHTML = `
+            <button class="botao-final botao-realidade" id="botao-vivenciar">
+                <span class="botao-texto">Vivenciar Outra Realidade</span>
+                <div class="botao-efeito"></div>
+            </button>
+            <button class="botao-final botao-feedback" id="botao-feedback">
+                <span class="botao-texto">Dar Feedback</span>
+                <div class="botao-efeito"></div>
+            </button>
+        `;
+        
+        this.elementos.telaFinal.appendChild(botoesContainer);
+        document.getElementById('botao-vivenciar').addEventListener('click', () => {
+            this.reiniciarJogo();
+        });
+        
+        document.getElementById('botao-feedback').addEventListener('click', () => {
+            window.open('https://github.com/douglaseng', '_blank');
+        });
+        setTimeout(() => {
+            botoesContainer.classList.add('mostrar');
+        }, 500);
+    }
+
+    reiniciarJogo() {
+        this.limparTimeouts();
+        this.resetarElementos();
+        
+        this.elementos.telaFinal.classList.remove('ativa');
+        this.elementos.telaFinal.style.display = 'none';
+        
+        const telaPersonagem = document.getElementById('tela-personagem');
+        if (telaPersonagem) {
+            telaPersonagem.classList.add('ativa');
+            telaPersonagem.style.display = 'block';
+        }
+        
+        if (window.jogo && window.jogo.resetar) {
+            window.jogo.resetar();
+        }
+    }
+
+        resetarElementos() {
+            this.elementos.efeitoDramatico.classList.remove('ativo');
+            this.elementos.efeitoDramatico.style.display = 'none';
+            
+            this.elementos.desfechoNarrativo.classList.add('oculto');
+            this.elementos.desfechoNarrativo.classList.remove('mostrar');
+            this.elementos.fraseDesfecho.textContent = '';
+            
+            this.elementos.imagensContainer.classList.add('oculto');
+            this.elementos.imagensContainer.classList.remove('mostrar');
+            this.elementos.imagensContainer.style.opacity = '1';
+            this.elementos.imagensContainer.style.transition = '';
+            
+            this.elementos.imagemCentral.innerHTML = '';
+            this.elementos.imagemCentral.style.opacity = '0';
+            this.elementos.colagemImagens.innerHTML = '';
+            this.elementos.imagemFinalCentral.innerHTML = '';
+            this.elementos.imagemFinalCentral.style.opacity = '0';
+            
+            if (this.elementos.finalVerdadeiro) {
+                this.elementos.finalVerdadeiro.classList.remove('mostrar', 'oculto');
+                this.elementos.finalVerdadeiro.style.opacity = '';
+                this.elementos.finalVerdadeiro.style.display = '';
+            }
+            
+            if (this.elementos.fraseAtual) {
+                this.elementos.fraseAtual.textContent = '';
+                this.elementos.fraseAtual.classList.remove('mostrar', 'sair');
+            }
+            
+            if (this.elementos.finalContent) {
+                this.elementos.finalContent.classList.remove('sair-final');
+            }
+            
+            const finalContainer = document.getElementById('container-final');
+            if (finalContainer) {
+                finalContainer.remove();
+            }
+            
+            const frasesFinais = document.getElementById('frases-finalizacao-container');
+            if (frasesFinais) {
+                frasesFinais.remove();
+            }
+            
+            const botoesFinais = document.getElementById('botoes-finais-container');
+            if (botoesFinais) {
+                botoesFinais.remove();
+            }
+            
+            this.frasesNarrativa = [];
+            this.fraseAtualIndex = 0;
+        }
 
     limparTimeouts() {
         this.timeouts.forEach(timeout => clearTimeout(timeout));

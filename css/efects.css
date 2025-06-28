@@ -152,7 +152,7 @@
     height: 300px;
     top: 10%;
     left: -150px;
-    animation: sombra1Move 8s ease-in-out;
+    animation: sombra1Move 14s ease-in-out;
 }
 
 .sombra-2 {
@@ -160,7 +160,7 @@
     height: 400px;
     top: 60%;
     right: -200px;
-    animation: sombra2Move 8s ease-in-out;
+    animation: sombra2Move 14s ease-in-out;
 }
 
 .sombra-3 {
@@ -169,7 +169,7 @@
     bottom: 20%;
     left: 50%;
     transform: translateX(-50%);
-    animation: sombra3Move 8s ease-in-out;
+    animation: sombra3Move 14s ease-in-out;
 }
 
 @keyframes sombra1Move {
@@ -228,6 +228,9 @@
 }
 
 .linha-terror:nth-child(3) {
+    animation: textoAssombrado 2s ease-out 4s forwards;
+}
+.linha-terror:nth-child(4) {
     animation: textoAssombrado 2s ease-out 4s forwards;
 }
 
