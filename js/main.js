@@ -59,7 +59,7 @@ class RealidadesInvisiveis {
                 <div class="icone">${personagem.icone}</div>
                 <div class="nome">${personagem.nome}</div>
                 <div class="descricao">${personagem.descricao}</div>
-                <div class="historia-preview">${personagem.historia.substring(0, 120)}...</div>
+                <div class="historia-preview">${personagem.historia.substring(0, 150)}..</div>
             `;
 
             card.addEventListener('click', () => this.selecionarPersonagem(id));

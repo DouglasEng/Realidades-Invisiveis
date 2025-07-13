@@ -62,7 +62,7 @@ class SequenciaFinal {
                 ],
                 final: 'images/trabalhador-informal/foto.png'
             },
-            'deficiencia': {
+            'pessoa-deficiente': {
                 central: 'images/deficiência/frase1.png',
                 colagem: [
                     'images/deficiência/imagem1.png',
@@ -99,7 +99,7 @@ class SequenciaFinal {
                 "Você é o motor que move a economia real.",
                 "Sua luta merece reconhecimento e respeito."
             ],
-            'deficiencia': [
+            'pessoa-deficiente': [
                 "Suas limitações não definem suas possibilidades.",
                 "Você quebra barreiras todos os dias.",
                 "Sua existência é uma forma de resistência.",
