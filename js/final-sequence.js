@@ -502,8 +502,12 @@ class SequenciaFinal {
         
         this.elementos.telaFinal.classList.remove('ativa');
         this.elementos.telaFinal.style.display = 'none';
+        const telaPersonagem = this.elementos.telaPersonagem;
+        telaPersonagem.style.display = 'flex';
+        telaPersonagem.style.alignItems = 'center';
+        telaPersonagem.style.justifyContent = 'center';
+        this.criarCardsPersonagens();
         
-        const telaPersonagem = document.getElementById('tela-personagem');
         if (telaPersonagem) {
             telaPersonagem.classList.add('ativa');
             telaPersonagem.style.display = 'block';
@@ -514,58 +518,58 @@ class SequenciaFinal {
         }
     }
 
-        resetarElementos() {
-            this.elementos.efeitoDramatico.classList.remove('ativo');
-            this.elementos.efeitoDramatico.style.display = 'none';
-            
-            this.elementos.desfechoNarrativo.classList.add('oculto');
-            this.elementos.desfechoNarrativo.classList.remove('mostrar');
-            this.elementos.fraseDesfecho.textContent = '';
-            
-            this.elementos.imagensContainer.classList.add('oculto');
-            this.elementos.imagensContainer.classList.remove('mostrar');
-            this.elementos.imagensContainer.style.opacity = '1';
-            this.elementos.imagensContainer.style.transition = '';
-            
-            this.elementos.imagemCentral.innerHTML = '';
-            this.elementos.imagemCentral.style.opacity = '0';
-            this.elementos.colagemImagens.innerHTML = '';
-            this.elementos.imagemFinalCentral.innerHTML = '';
-            this.elementos.imagemFinalCentral.style.opacity = '0';
-            
-            if (this.elementos.finalVerdadeiro) {
-                this.elementos.finalVerdadeiro.classList.remove('mostrar', 'oculto');
-                this.elementos.finalVerdadeiro.style.opacity = '';
-                this.elementos.finalVerdadeiro.style.display = '';
-            }
-            
-            if (this.elementos.fraseAtual) {
-                this.elementos.fraseAtual.textContent = '';
-                this.elementos.fraseAtual.classList.remove('mostrar', 'sair');
-            }
-            
-            if (this.elementos.finalContent) {
-                this.elementos.finalContent.classList.remove('sair-final');
-            }
-            
-            const finalContainer = document.getElementById('container-final');
-            if (finalContainer) {
-                finalContainer.remove();
-            }
-            
-            const frasesFinais = document.getElementById('frases-finalizacao-container');
-            if (frasesFinais) {
-                frasesFinais.remove();
-            }
-            
-            const botoesFinais = document.getElementById('botoes-finais-container');
-            if (botoesFinais) {
-                botoesFinais.remove();
-            }
-            
-            this.frasesNarrativa = [];
-            this.fraseAtualIndex = 0;
+    resetarElementos() {
+        this.elementos.efeitoDramatico.classList.remove('ativo');
+        this.elementos.efeitoDramatico.style.display = 'none';
+        
+        this.elementos.desfechoNarrativo.classList.add('oculto');
+        this.elementos.desfechoNarrativo.classList.remove('mostrar');
+        this.elementos.fraseDesfecho.textContent = '';
+        
+        this.elementos.imagensContainer.classList.add('oculto');
+        this.elementos.imagensContainer.classList.remove('mostrar');
+        this.elementos.imagensContainer.style.opacity = '1';
+        this.elementos.imagensContainer.style.transition = '';
+        
+        this.elementos.imagemCentral.innerHTML = '';
+        this.elementos.imagemCentral.style.opacity = '0';
+        this.elementos.colagemImagens.innerHTML = '';
+        this.elementos.imagemFinalCentral.innerHTML = '';
+        this.elementos.imagemFinalCentral.style.opacity = '0';
+        
+        if (this.elementos.finalVerdadeiro) {
+            this.elementos.finalVerdadeiro.classList.remove('mostrar', 'oculto');
+            this.elementos.finalVerdadeiro.style.opacity = '';
+            this.elementos.finalVerdadeiro.style.display = '';
         }
+        
+        if (this.elementos.fraseAtual) {
+            this.elementos.fraseAtual.textContent = '';
+            this.elementos.fraseAtual.classList.remove('mostrar', 'sair');
+        }
+        
+        if (this.elementos.finalContent) {
+            this.elementos.finalContent.classList.remove('sair-final');
+        }
+        
+        const finalContainer = document.getElementById('container-final');
+        if (finalContainer) {
+            finalContainer.remove();
+        }
+        
+        const frasesFinais = document.getElementById('frases-finalizacao-container');
+        if (frasesFinais) {
+            frasesFinais.remove();
+        }
+        
+        const botoesFinais = document.getElementById('botoes-finais-container');
+        if (botoesFinais) {
+            botoesFinais.remove();
+        }
+        
+        this.frasesNarrativa = [];
+        this.fraseAtualIndex = 0;
+    }
 
     limparTimeouts() {
         this.timeouts.forEach(timeout => clearTimeout(timeout));
